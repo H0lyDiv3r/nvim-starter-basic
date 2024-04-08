@@ -12,6 +12,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
+          "pyre"
         },
         automatic_installation = true
       })
@@ -26,6 +27,9 @@ return {
         capabilities = capabilities
       })
       lspconfig.rust_analyzer.setup({
+        capabilities = capabilities;
+      })
+      lspconfig.clangd.setup({
         capabilities = capabilities;
       })
       lspconfig.lua_ls.setup({
